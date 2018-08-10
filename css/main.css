@@ -1,0 +1,501 @@
+/*== GENERAL ===================================================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    text-rendering: optimizeLegibility;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/*== HEADER ===================================================================== */
+
+header {
+    background: url(../img/Header-BG.jpg);
+    height: 98vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 45%;
+    left: 10%;
+    color: #fff;
+    backface-visibility: hidden;
+}
+.logo {
+    height: 10em;
+    width: auto;
+    float: left;
+    margin-top: 25px;
+    position: absolute;
+    left: 10%;
+}
+
+/*.logo:hover{
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out,
+}*/
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 75px;
+    display: flex;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.main-nav li a {
+    display: inline-block;
+    color: #fff;
+    font-size: 105%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom : 3px solid transparent;
+    position: relative;
+    transition: 0.3s;
+}
+.main-nav li a:hover {
+    color: #21b7ff;
+
+}
+
+.main-nav li a::after{
+    content: '';
+    height: 2px;
+    width: 65%;
+    position: absolute;
+    background-color: #21b6ff;
+    left: calc(27% - 10%);
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s;
+    transform: scale(0);
+    transform-origin: center;
+    
+}
+
+.main-nav li a:hover::after{
+    color: #21b7ff;
+    opacity: 1;
+    transform: scale(1);
+    
+}
+
+h1 {
+    margin: 0;
+    letter-spacing: 10px;
+    font-size: 350%;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out,
+}
+
+h2 {
+    color: #21b7ff;
+    font-size: 180%;
+    font-weight: 100;
+    letter-spacing: 5px;
+    padding-top: 1%;
+    padding-left: 2%;
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out,
+}
+
+p {
+    line-height: 170%;
+    letter-spacing: 1px;
+    padding-left: 2%;
+    font-size: 85%;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 2%;
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out,
+}
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px)
+    }
+    
+    70%{
+        transform: translateX(10px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px)
+    }
+    
+    70% {
+        transform: translateX(-10px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin-top: 2.5%;
+}
+
+.btn-readmore:link,
+.btn-readmore:visited {
+    background-color: #21b6ff;
+    border-radius: 30px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-order:link,
+.btn-order:visited {
+    background-color: #8dc63f;
+    border-radius: 30px;
+    color: #172700;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 1%;
+    transition: 0.2s ease-out;
+}
+
+.btn-readmore:hover,
+.btn-readmore:active {
+    background-color: #ffffff;
+    color: #001b55;
+} 
+
+.btn-order:hover,
+.btn-order:active {
+    background-color: #ffffff;
+}
+
+
+
+/*== WATER DEFINITION ===================================================================== */
+
+#composition{
+    height: 800px;
+}
+
+.definition-heading {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.cup {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.right-definitions {
+    text-align: right;
+}
+
+.chimical-elements {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 170%;
+    color: #012574;
+    line-height: 20px;
+}
+
+.grams {
+    font-size: 60%;
+    color: #21b6ff;
+}
+
+.inside {
+    color: #21b6ff;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 190%;
+    font-weight: 100;
+    padding: 0;
+}
+
+h3 {
+    color: #012574;
+    font-size: 260%;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+
+.separateur {
+    width: 100px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.definition {
+    line-height: 170%;
+    letter-spacing: 0px;
+    padding-left: 2%;
+    font-size: 90%;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 2%;
+}
+
+/*== PRODUCT CHOICE ===================================================================== */
+
+#products {
+    background-color: #f1f6fb;
+    height: 900px;
+
+}
+
+.products-heading {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.nos-produits {
+    color: #21b6ff;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 150%;
+    font-weight: 100;
+}
+
+.bottle01 {
+    background-color: #fff;
+    width: 360px;
+    height: 450px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+
+.bottle02 {
+    background-color: #fff;
+    width: 360px;
+    height: 450px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.bottle03 {
+    background-color: #fff;
+    width: 360px;
+    height: 450px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0px 0px 25px rgba(0, 16, 87, 0.205);
+    margin-left: 40px;
+}
+
+
+.bottle01:hover {
+    box-shadow: 0px 10px 30px rgba(0, 16, 87, 0.205);
+    transform: scale(1.05);
+    transition: all .2s ease-out;
+}
+
+.bottle02:hover {
+    box-shadow: 0px 10px 30px rgba(0, 16, 87, 0.205);
+    transform: scale(1.05);
+    transition: all .2s ease-in-out;
+}
+
+.bottle03:hover {
+    box-shadow: 0px 10px 30px rgba(0, 16, 87, 0.205);
+    transform: scale(1.05);
+    transition: all .2s ease-out;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.17)
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.17)
+}
+
+.btn-order-products:link,
+.btn-order-products:visited {
+    background-color: #21b6ff;
+    border-radius: 30px;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    margin-top: 97%;
+    transition: all 0.2s;
+}
+.btn-order-products:hover,
+.btn-order-products:active {
+    background-color: #8dc63f;
+    color: #172700;
+}
+
+h4 {
+    margin-top: 50px;
+    position: relative;
+    top: 50%;
+    color: #e5f0fc;
+}
+
+/*== SERVICE LIVRAISON et HISTORIQUE ===================================================================== */
+.livraison{
+    height: 200px;
+    width: 100%;
+    background-color: #002c8f;
+    text-align: center;
+    z-index: -1;
+
+}
+
+h5{
+    color: #fff;
+    font-size: 260%;
+    font-weight: 900;
+    letter-spacing: 1px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+span{
+    color: #21b6ff;
+}
+
+.sept-sur-sept{
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 180%;
+    font-style: normal;
+    padding: 35px;
+    margin-left: 5%;
+    display: inline-block;   
+     
+}
+
+#deliver{
+    display: inline-block;
+    margin-left: 3%;
+}
+
+.history{
+    background-image: url(../img/bottom-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 379px;
+    position: relative;
+    bottom: 20px;
+    z-index: 99;
+    text-align: center;
+}
+
+h6{
+    color: #002c8f;
+    font-size: 280%;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding-top: 110px;
+}
+
+.historique{
+    color: #002c8f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 140%;
+    font-style: normal;
+    margin: 0;
+    padding: 15px 0;
+}
+
+
+/*== FOOTER ===================================================================== */
+footer{
+    background-color: #f1f6fb;
+    text-align: center;
+    padding: 35px 0;
+    position: relative;
+    bottom: 20px;
+
+}
+.footer-nav{
+    list-style: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.footer-nav li{
+    display: inline-block;
+    margin-left: 20px;
+}
+.footer-nav li a{
+    color: #002c8f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px;
+    border-bottom : 3px solid transparent;
+    transition: 0.3s;
+}
+
+.footer-nav li a:hover{
+    color: #21b6ff;
+}
+
+
+.footer-info{
+    color: #002c8f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 120%;
+    font-style: normal;
+
+}
+
+.copyright{
+    color: #002c8f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 115%;
+    font-style: normal;
+}
